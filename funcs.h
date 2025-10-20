@@ -7,7 +7,7 @@
  * const.
  */
 
-#ifdef __STDC__
+#if defined( __STDC__ ) || defined( _MSC_VER )
 #define P(x) x
 #else
 #define P(x) ()
@@ -25,7 +25,7 @@
 #define BINREAD "r"
 #define BINWRITE "w"
 #else /* ! unix */
-#ifdef __STDC__
+#if defined( __STDC__ ) || defined( _MSC_VER )
 #define BINREAD "rb"
 #define BINWRITE "wb"
 #else /* ! __STDC__ */
